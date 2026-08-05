@@ -1,0 +1,66 @@
+# La Haus
+
+> La Haus is a Latin American proptech company (founded 2017, Medellín/Bogotá, Colombia) that runs
+> the residential real-estate marketplaces lahaus.com (Colombia) and lahaus.mx (Mexico) plus an
+> in-house brokerage. It lists de-duplicated, verified new-construction and resale housing from
+> vetted developers, adds mortgage and down-payment simulators and buyer guides, and walks buyers
+> through negotiation and closing at no cost to the buyer.
+
+## Important: no public API
+
+La Haus publishes **no public API, developer portal, API documentation, OpenAPI/AsyncAPI/GraphQL
+contract, SDK, MCP server, agent card or llms.txt**. Verified 2026-08-04:
+
+- `api.lahaus.com` is a private AWS API Gateway. Every anonymous request — root, `/openapi.json`,
+  `/swagger.json`, `/graphql`, `/api-docs`, `/.well-known/*` — returns `403 MissingAuthenticationToken`.
+- The consumer sites' `/api/*` paths are `Disallow`ed in `robots.txt` and return 404 to anonymous GETs.
+- No `/.well-known/` document is served on any host (no `security.txt`, no OIDC/OAuth discovery,
+  no `api-catalog`, no `ai-plugin.json`, no `agent-card.json`, no `agent.json`).
+- No `developer.`/`developers.`/`docs.`/`status.` subdomain resolves in DNS.
+- Portal/partner syndication runs through access-controlled marketing feed integrations
+  (`/marketing_integrations/trovit*`, HTTP 403).
+
+Do not attempt to call an "La Haus API" — there is no public one to call. Property data must be
+obtained through the public website or a commercial agreement with the company.
+
+## Websites
+
+- [La Haus Colombia](https://www.lahaus.com/): Colombian marketplace, guides, calculators and listings.
+- [La Haus Mexico](https://www.lahaus.mx/): Mexican marketplace (same platform, MX inventory).
+- [About / Quiénes somos](https://www.lahaus.com/quienes-somos): company overview, investors, offices.
+
+## Content and tools
+
+- [Blog](https://www.lahaus.com/blog): market news, buying guides, industry reports.
+- [Blog RSS](https://www.lahaus.com/blog/rss.xml): RSS 2.0 feed (served from blogdesarrolladores.lahaus.com).
+- [Real-estate guides](https://www.lahaus.com/guias-inmobiliarias): investment and first-purchase guides.
+- [Home-buying guide](https://www.lahaus.com/guia-compra-vivienda): budget, financing and promise-of-sale steps.
+- [Calculators](https://www.lahaus.com/herramientas): down-payment and mortgage simulators.
+- [Help center](https://www.lahaus.com/centro-de-ayuda): buyer support.
+
+## Legal
+
+- [Terms and conditions](https://www.lahaus.com/terminos-y-condiciones)
+- [Personal data processing policy](https://www.lahaus.com/politicas-tratamiento-datos)
+- [Cookie policy](https://www.lahaus.com/static/politica-cookies-co-v1)
+
+## Open source
+
+La Haus ships no API client SDK, but its engineering teams publish first-party open-source libraries:
+
+- [github.com/la-haus](https://github.com/la-haus): 36 public repositories (11 first-party, the rest forks).
+- [flutter_segment](https://pub.dev/packages/flutter_segment): Flutter Segment Analytics implementation.
+- [iterable_flutter](https://pub.dev/packages/iterable_flutter): Flutter client for Iterable.com.
+- [@lahaus-nuxt/winston-logs](https://www.npmjs.com/package/@lahaus-nuxt/winston-logs) and
+  [@lahaus-nuxt/datadog-trace](https://www.npmjs.com/package/@lahaus-nuxt/datadog-trace): internal Nuxt modules.
+
+## Contact
+
+- Phone: +57 4 590 8977 (published on the website footer)
+- Bogotá office: Edificio AC Hotel, Torre Oficinas, Ac. 85 #12-66 Piso 12, Bogotá, Colombia
+
+---
+generated: 2026-08-04
+method: generated
+source: apis.yml + live probes of lahaus.com, lahaus.mx, api.lahaus.com (no provider llms.txt exists;
+  https://www.lahaus.com/llms.txt returns 404)

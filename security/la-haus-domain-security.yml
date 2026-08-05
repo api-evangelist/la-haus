@@ -1,0 +1,50 @@
+generated: '2026-08-04'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts plus the lahaus.mx and api.lahaus.com
+  hosts observed during contract discovery
+hosts:
+- host: www.lahaus.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 14:01:06 2026 GMT
+  http_status: 200
+  hsts: false
+  hsts_header: max-age=0
+  note: A Strict-Transport-Security header is sent but with max-age=0, which explicitly
+    clears/disables HSTS rather than enforcing it.
+- host: www.lahaus.mx
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 20 03:58:48 2026 GMT
+  http_status: 200
+  hsts: false
+- host: api.lahaus.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  6 23:59:59 2027 GMT
+  http_status: 403
+  hsts: false
+  note: Private AWS API Gateway. Every anonymous path returns 403 MissingAuthenticationToken.
+domains:
+- domain: lahaus.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: v=spf1 include:_spf.google.com include:_spf.salesforce.com include:_spf.embluemail.com
+    include:spf.protection.outlook.com include:21568098.spf05.hubspotemail.net ~all
+  dmarc: true
+  dmarc_policy: quarantine
+  dmarc_record: v=DMARC1; p=quarantine; pct=100; rua=mailto:postmaster@lahaus.com
+- domain: lahaus.mx
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: v=spf1 include:_spf.google.com include:_spf.salesforce.com include:_spf.embluemail.com
+    include:spf.protection.outlook.com ~all
+  dmarc: true
+  dmarc_policy: quarantine
+  dmarc_record: 'v=DMARC1; p=quarantine; pct=100; rua=mailto:postmaster@lahaus.com
+    ruf=mailto:postmaster@lahaus.com'
+x-evidence:
+  probed: '2026-08-04'
+  tools: [dig, openssl s_client, curl]

@@ -1,0 +1,89 @@
+generated: '2026-08-04'
+method: searched
+source: npm registry search, pub.dev API, github.com/la-haus org listing
+note: La Haus publishes no client SDK for a La Haus API — it has no public API. The
+  packages below are first-party ENGINEERING libraries released as open source by the
+  La Haus mobile and web teams (Flutter wrappers around third-party vendor SDKs, and
+  internal Nuxt/web-component modules). They are catalogued as Packages only; no `SDKs`
+  pointer is emitted because none of them is a client library for a La Haus API.
+packages:
+- language: dart
+  registry: pub.dev
+  name: flutter_segment
+  version: 3.13.1
+  url: https://pub.dev/packages/flutter_segment
+  install: flutter pub add flutter_segment
+  source_code: https://github.com/la-haus/flutter-library-segment
+  description: Flutter implementation of Segment Analytics for iOS, Android and Web.
+  homepage: https://lahaus.com
+  official: true
+  api_client: false
+  last_published: '2023-08-03'
+- language: dart
+  registry: pub.dev
+  name: iterable_flutter
+  version: 0.5.8
+  url: https://pub.dev/packages/iterable_flutter
+  install: flutter pub add iterable_flutter
+  source_code: https://github.com/la-haus/iterable-flutter
+  description: Flutter implementation for iterable.com Cross Channel Marketing Platform.
+  homepage: https://lahaus.com
+  official: true
+  api_client: false
+  last_published: '2022-12-26'
+- language: javascript
+  registry: npm
+  name: '@lahaus-web-components/lhwc-documents'
+  version: 0.1.2
+  url: https://www.npmjs.com/package/@lahaus-web-components/lhwc-documents
+  install: npm install @lahaus-web-components/lhwc-documents
+  description: (LaHaus Documents) Web Component.
+  license: MIT
+  npm_maintainers: [lahausnpm, gatodeveloper]
+  source_code: https://github.com/la-haus/lhwc-documents
+  source_code_status: 404 (repository no longer public)
+  official: true
+  api_client: false
+  last_published: '2022-06-09'
+- language: javascript
+  registry: npm
+  name: '@lahaus-nuxt/winston-logs'
+  version: 0.7.0
+  url: https://www.npmjs.com/package/@lahaus-nuxt/winston-logs
+  install: npm install @lahaus-nuxt/winston-logs
+  description: Winston logging module for La Haus Nuxt.js applications.
+  license: MIT
+  npm_maintainers: [lahausnpm]
+  source_code: https://github.com/la-haus/nuxt-winston-logs
+  source_code_status: 404 (repository no longer public)
+  official: true
+  api_client: false
+  last_published: '2023-03-31'
+- language: javascript
+  registry: npm
+  name: '@lahaus-nuxt/datadog-trace'
+  version: 0.7.0
+  url: https://www.npmjs.com/package/@lahaus-nuxt/datadog-trace
+  install: npm install @lahaus-nuxt/datadog-trace
+  description: Install and configure Datadog trace to receive traces of an instrumented
+    application.
+  license: MIT
+  npm_maintainers: [lahausnpm]
+  source_code: https://github.com/la-haus/nuxt-datadog-trace
+  source_code_status: 404 (repository no longer public)
+  official: true
+  api_client: false
+  last_published: '2023-03-14'
+registries_probed:
+- {registry: npm, query: lahaus, result: 3 first-party scoped packages}
+- {registry: pub.dev, result: 2 first-party packages (homepage lahaus.com)}
+- {registry: pypi, query: lahaus, result: 404}
+- {registry: rubygems, query: lahaus, result: 0}
+- {registry: packagist, query: lahaus, result: 0}
+- {registry: 'maven central / nuget / crates.io / pkg.go.dev', result: no first-party
+    artifacts found}
+x-evidence:
+  fetched: '2026-08-04'
+  github_org: https://github.com/la-haus
+  github_public_repos: 36
+  github_first_party_non_forks: 11

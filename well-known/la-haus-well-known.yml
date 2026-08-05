@@ -1,0 +1,48 @@
+generated: '2026-08-04'
+method: probed
+source: live HTTP probes of every La Haus host discovered during contract discovery
+result: none
+note: 'No /.well-known/ discovery document is served by any La Haus host. The two consumer
+  web hosts answer every /.well-known/* path with the SPA 404 page (HTTP 404, text/html,
+  ~1.28MB); the API host is a private AWS API Gateway that answers every path with
+  403 MissingAuthenticationToken. No security.txt, no OIDC/OAuth discovery, no api-catalog,
+  no ai-plugin.json, no agent card. No `WellKnown` or `SecurityTxt` pointer is emitted
+  — nothing was found.'
+hosts:
+- host: https://www.lahaus.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/html}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/html}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/html}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html}
+  - {path: /llms.txt, status: 404, content_type: text/html}
+  - {path: /robots.txt, status: 200, content_type: text/plain}
+  - {path: /sitemap.xml, status: 200, content_type: application/xml}
+- host: https://www.lahaus.mx
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/html}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/html}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html}
+  - {path: /llms.txt, status: 404, content_type: text/html}
+  - {path: /robots.txt, status: 200, content_type: text/plain}
+  - {path: /sitemap.xml, status: 200, content_type: application/xml}
+- host: https://api.lahaus.com
+  note: AWS API Gateway; anonymous requests return 403 MissingAuthenticationToken for
+    every path including the root.
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+  - {path: /.well-known/agent-card.json, status: 403}
+  - {path: /.well-known/agent.json, status: 403}
+x-evidence:
+  probed: '2026-08-04'
+  tool: curl
