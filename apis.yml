@@ -21,7 +21,7 @@ x-source: harvest:secondary-market
 x-harvest-source-url: https://www.hiive.com/securities/la-haus-stock
 x-tier: stub
 x-tier-reason: harvest
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-04'
 modified: '2026-08-04'
 image: https://media.lahaus.com/statics/static/images/open-graph-tags/Colombia.png
