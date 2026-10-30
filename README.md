@@ -64,5 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-La Haus is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/la-haus-stock
+La Haus is a Latin American proptech company, founded in 2017 and headquartered in Medellín and Bogotá, Colombia, that operates the residential real-estate marketplaces lahaus.com (Colombia) and lahaus.mx (Mexico) together with an in-house brokerage. The platform lists de-duplicated, verified new-construction and resale housing from vetted developers, adds mortgage and down-payment simulators, buyer guides and an AI assistant, and takes buyers through negotiation and closing at no cost to the buyer. It has raised more than $135M in equity plus debt facilities from Kaszek, NFX, Acrew Capital, Greenspring Associates, SoftBank and Bezos Expeditions. La Haus publishes NO public developer portal, API documentation, SDK or machine-readable contract: the consumer sites are server-rendered applications whose /api/* paths are disallowed in robots.txt, and api.lahaus.com is a private AWS API Gateway that answers every anonymous request with MissingAuthenticationToken. Partner/portal syndication runs through access-controlled marketing feed integrations (Trovit). This profile therefore records the company's public web surface and security posture rather than an API surface.
+
+**Areas:** Company · Real Estate · PropTech · Marketplace · Housing · Mortgage · Brokerage · Latin America · Colombia · Mexico
+
+## La Haus on APIs.io
+
+Everything profiled for La Haus is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/la-haus/](https://apis.io/providers/la-haus/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [La Haus Domain Security](https://apis.io/security/la-haus/la-haus-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lahaus.com/)
+- [Support](https://www.lahaus.com/centro-de-ayuda)
+- [Blog](https://www.lahaus.com/blog)
+- [Terms of service](https://www.lahaus.com/terminos-y-condiciones)
+- [Privacy policy](https://www.lahaus.com/politicas-tratamiento-datos)
+- [GitHub](https://github.com/la-haus)
+
+## API Evangelist rating
+
+**Kin Score 11.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.0** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/la-haus/](https://apis.io/providers/la-haus/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for La Haus: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/la-haus/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
